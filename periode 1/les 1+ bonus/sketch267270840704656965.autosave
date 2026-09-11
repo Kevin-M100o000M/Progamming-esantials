@@ -1,0 +1,7 @@
+size(1440, 900);
+fullScreen();
+background(64, 80, 200);
+fill(120, 200, 30);
+textSize(30);
+text("Kevin", 10, 25);
+circle(300,300,50);

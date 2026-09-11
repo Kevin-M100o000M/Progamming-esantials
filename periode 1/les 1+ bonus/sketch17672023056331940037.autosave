@@ -1,0 +1,5 @@
+size(600, 300);
+background(64, 80, 200);
+fill(0, 0, 0);
+textSize(30);
+text("Kevin", 240, 150);
