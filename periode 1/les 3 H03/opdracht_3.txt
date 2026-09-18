@@ -1,0 +1,6 @@
+schermgroote van 400 bij 400
+witte background
+rode rectangle met x en  y 100 en 200 groote
+groene rectangle met x en  y 150 en 100 groote
+rode overlapt met 150 groote pixels
+
