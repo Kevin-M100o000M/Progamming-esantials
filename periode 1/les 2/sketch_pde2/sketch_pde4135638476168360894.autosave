@@ -1,0 +1,10 @@
+k//size(1440,900);
+background(200,255,2);
+//size(200,200);
+//
+rect(30,30,50,50);
+//
+text(90,90,300);
+
+print("I am  \n");
+println("I am no like water");

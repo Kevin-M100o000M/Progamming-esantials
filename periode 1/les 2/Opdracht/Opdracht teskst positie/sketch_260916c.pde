@@ -1,0 +1,25 @@
+size(1400,900);
+background(255,255,255);
+String text = "teskt";
+float r = random(0,255);
+float g = random(0,255);
+float b = random(0,255);
+float r2 = random(0,255);
+float g2 = random(0,255);
+float b2 = random(0,255);
+float r3 = random(0,255);
+float g3 = random(0,255);
+float b3 = random(0,255);
+
+textSize(45);
+fill(22,144,99);
+text(text,700,30);
+
+fill(r,g,b);
+text(text,10,850);
+
+fill(r2,g2,b2);
+text(text,10,850);
+`
+fill(r3,g3,b3);
+text(text,1300,450);

@@ -1,0 +1,8 @@
+size(1440, 900);
+
+rect(30, 30, 50, 50);
+
+text(30, 30, 3);
+k
+  println("I am error");
+println("I am bugs");
