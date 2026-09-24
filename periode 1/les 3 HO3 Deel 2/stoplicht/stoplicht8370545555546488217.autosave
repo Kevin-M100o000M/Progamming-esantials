@@ -1,0 +1,83 @@
+int grijzeLicht = 10;
+int GroenLicht = 40;
+int Groen1 = 3;
+int Groen3 = 72;
+int OranjeLicht1 = 40;
+int OranjeLicht2 = 40;
+int RodeLicht = 40;
+int licht = 1;
+//int sec = (millis() / 1000);
+
+void setup(){
+size(1440,900);
+background(255,255,255);
+}
+
+void draw(){
+  //noStroke();
+  background(255,255,255);
+  //int sec = second();
+  //int sec = millis() / 1000;
+  //sec -= 1;
+  fill(0,0,0);
+  ellipse(width/2,height/2,400,400);
+  fill(255,255,255);
+  ellipse(width/2.2,height/2.5,75,100);
+  ellipse(width/1.8,height/2.5,75,100);
+  fill(200,0,0);
+  arc(width/2.2,height/3,80,40, PI, PI*2);
+  arc(width/2,height/1.8,320,160, 0, PI);
+
+
+  //stopLicht();
+  
+
+
+}
+
+void stopLicht(){
+  fill(0,0,0);
+  rect(550,150,300,500);
+
+  fill(Groen1,GroenLicht,Groen3);
+  ellipse(700,250,120,120);
+
+  fill(OranjeLicht1,OranjeLicht2,40);
+  ellipse(700,400,120,120);
+
+  fill(RodeLicht,40,40);
+  ellipse(700,550,120,120);
+
+  switch(licht){
+    case 1:
+      Groen1 = 3;
+      Groen3 = 72;
+      GroenLicht += 2;
+      if(GroenLicht >= 122 && licht == 1){
+        GroenLicht = 0;
+        licht = 2;
+      }
+      break;
+    case 2:
+      Groen1 = 40;
+      Groen3 = 40;
+      OranjeLicht1 += 3;
+      OranjeLicht2 += 2;
+      if(OranjeLicht2 >= 125){
+        OranjeLicht2 = 125;
+      }
+      if(OranjeLicht1 >= 255){
+        OranjeLicht2 = 40;
+        OranjeLicht1 = 40;
+        licht = 3;
+      }
+      break;
+    case 3:
+      RodeLicht += 3;
+      if(RodeLicht >= 255 && licht == 3){
+        RodeLicht = 0;
+        licht = 1;
+      }
+      break;
+  }
+}
