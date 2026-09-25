@@ -1,0 +1,62 @@
+  int opdracht = 0;
+int rectX = 100;
+int rectY = 100;
+int antY = 300;
+int numY = 70;
+int rectWidth = 60;
+int rectHeight = 60;
+int som1 = 15%2;
+int som2 = 31%3;
+int som3 = 10%5;
+int som4 = 38%4;
+String antwoord1 = str(som1);
+String antwoord2 = str(som2);
+String antwoord3 = str(som3);
+String antwoord4 = str(som4);
+
+void setup(){
+size(1400,900);
+}
+void draw(){
+  background(255,255,255);
+
+  switch(opdracht){
+    case 1:
+      varRect();
+      break;
+    case 2:
+      modulo();
+      break;
+  }
+
+  textSize(25);
+  text("1 voor rect met var er in\n 2 voor module sommen \n",width - 295,90);
+
+  if(key ==  '1'){
+    rectWidth = rectWidth % 2;
+    opdracht = 1;
+  }
+  if(key ==  '2'){
+    rectX = rectX % 2;
+    opdracht = 2;
+  }
+
+
+}
+
+void varRect(){
+  fill(rectX,rectY/4,rectWidth/2);
+  rect(rectX,rectY,rectWidth,rectHeight);
+}
+
+void modulo(){
+  textSize(40);
+  fill((rectWidth*rectX)%2,133,(rectWidth*rectX)%14);
+  text("15 % 2 = " + antwoord1,rectX+rectWidth,antY + numY);
+  fill(239,133,(rectWidth*rectX)%14);
+  text("31 % 3 = " + antwoord2,rectX+rectWidth,antY + numY*2);
+  fill((rectWidth*rectX)%2,133,203);
+  text("10 % 5 = " + antwoord3,rectX+rectWidth,antY + numY*3);
+  fill(240,29,203);
+  text("38 % 4 = " + antwoord4,rectX+rectWidth,antY + numY*4);
+}
