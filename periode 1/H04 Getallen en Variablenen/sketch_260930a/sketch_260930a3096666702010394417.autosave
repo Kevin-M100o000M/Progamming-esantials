@@ -1,0 +1,13 @@
+float getal = 23.40340
+
+ setup(){
+size(1440,900);
+background(255,255,255);
+}
+
+void draw(){
+  getal = (int) getal;
+  textSize(25);
+  fill(0,0,0);
+  text(getal + "\n",width - 295,90);
+}
