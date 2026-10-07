@@ -1,8 +1,8 @@
-int opdracht = 0;
+3int opdracht = 0;
 String string1 = "string1";
 String string2 = "string2";
 String string3 = "string3";
-String string4 = string1 + " " + string2  + " " + string3 + " " + "string4";
+String string4 = string1 + "" + string2  + "" + string3 + "" + "string4";
 
 float gewicht = 10;
 float lengte = 1;
@@ -64,19 +64,13 @@ background(255,255,255);
 
 
   textSize(25);
+  fill(0,0,0);
   text("1 Stringen Aan elkaar\n 2 Wat Lang Zeg\n 3 BMI\n Gezichten op reis",width - 295,90);
   text(opdracht,width - 595,90);
-  fill(0,0,0);
 }
 
 void opdrachtStringsAanElkaar(){
-  background(0,0,0);
-  int red = 3;
-  int green = 3;
-  red = mouseX;
-  green = mouseY;
-  int blue = (red - green);
-  fill(red, green, blue);
+  fill(mouseX, mouseY, 0);
   text(string4, mouseX - (45 * 7), mouseY);
   //tempMouse = mouseX/mouseY;
 }
@@ -144,13 +138,6 @@ void gezichten(){
   gezicht(230 , 250);
   gezicht(650, 525);
   gezicht(1200, 620);
-
-  fill(0);
-  textSize(25);
-  text("ARROW UP is -Y", 900, 30);
-  text("ARROW DOWN is +Y" , 900, 60);
-  text("ARROW LEFT is -X" , 900, 90);
-  text("ARROW RIGHT is +X", 900, 120);
 }
 
 void gezicht(int posX, int posY){

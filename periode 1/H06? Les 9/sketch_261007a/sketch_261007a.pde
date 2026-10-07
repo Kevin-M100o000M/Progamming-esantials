@@ -1,4 +1,4 @@
-int score = 0;
+  int score = 0;
 int opdracht = 0;
 int leeftijd = 18;
 int konijn = 30;
@@ -109,9 +109,6 @@ void cirkelOfVierkant(){
 
   textSize(45);
   text("Vierkant: " + help + "\n",50,height/2 - 140);
-  text("Modifier: " + sizeModifier + "\n",50,height/2 - 190);
-  textSize(25);
-  text("f = false g = true\nw is plus modifier s is min\npijljtje om hoog plus heigt omlaag andersom en links rechts width\n",50,height/2 + 200);
 
   if(help == true){
     rect(X - widthRect/2, Y - heightRect/2, widthRect, heightRect);
@@ -134,17 +131,17 @@ void keyPressed(){
   if(opdracht == 3){
 
   if(keyCode ==  UP){
-      heightRect += sizeModifier;
+      widthRect += sizeModifier;
   }
   if(keyCode ==  DOWN){
-      heightRect -= sizeModifier;
+      widthRect -= sizeModifier;
   }
 
   if(keyCode ==  RIGHT){
-      widthRect += sizeModifier;
+      heightRect += sizeModifier;
   }
   if(keyCode ==  LEFT){
-      widthRect -= sizeModifier;
+      heightRect -= sizeModifier;
   }
 
   if(key ==  'w'){
@@ -162,4 +159,3 @@ void keyPressed(){
     }
   }
 }
-
