@@ -1,0 +1,55 @@
+int opdracht;
+int key;
+String string1 = "string1 ";
+String string2 = "string2 ";
+String string3 = "string3 ";
+String string4 = string1 + string2 + string3 + "string4";
+
+void setup() {
+  size(1440, 900);
+  background(255, 255, 255);
+}
+
+void draw() {
+  //noStroke();
+  background(255, 255, 255);
+
+  textSize(45);
+
+  switch(opdracht) {
+  case 1:
+    //opdrachtDriehoeken();
+    break;
+  case 2:
+    //opdrachtDriehoeken();
+    break;
+  case 3:
+    //opdrachtDriehoeken();
+    break;
+  case 4:
+    //opdrachtDriehoeken();
+    break;
+  }
+
+  // text(string4,width/3,height/2);
+  fill(mouseX, mouseY, 0);
+  text(string4, mouseX - (45 * 7), mouseY);
+
+
+  if (key ==  '1') {
+    opdracht = 1;
+  }
+  if (key ==  '2') {
+    opdracht = 2;
+  }
+  if (key ==  '3') {
+    opdracht = 3;
+  }
+  if (key ==  '4') {
+    opdracht = 4;
+  }
+
+  textSize(25);
+  fill(0, 0, 0);
+  text("1 voor driehoeken\n 2 voor envelop \n 3 voor lijnen\n 4 voor Nederlandse Vlag", width - 295, 90);
+}
